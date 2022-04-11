@@ -12,7 +12,7 @@
         $picture_type = $_FILES["image_categorie"]["type"];
         $allowed_type = array('image/png', 'image/jpg', 'image/jpeg');
         if(in_array($picture_type, $allowed_type)){
-            $path = 'images/'.$picture_name;
+            $path = './images/'.$picture_name;
             move_uploaded_file($picture_name, $path);
             echo "bien";
         }else{
